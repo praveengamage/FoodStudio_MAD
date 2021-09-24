@@ -34,4 +34,11 @@
     <string name="btnOplacement">Order Placement</string>
     <string name="btndelete">Order Delete</string>
     <string name="btnpay">Pay Now</string>
+    <string name="itemadd">+</string>
+    <string name="items">Items</string>
+    <string name="onbtn">newNote</string>
+    <string name="order">Order</string>
+    <string name="btnsave">Save</string>
+    <string name="food_details">Food Details</string>
+    <string name="save">Save</string>
 </resources>
