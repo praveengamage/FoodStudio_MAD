@@ -28,6 +28,7 @@
         android:id="@+id/btnOConfirm"
         android:layout_width="160dp"
         android:layout_height="64dp"
+        android:onClick="insertDb"
         android:text="@string/btnOConfirm"
         android:textStyle="bold"
         app:backgroundTint="@color/btncol"

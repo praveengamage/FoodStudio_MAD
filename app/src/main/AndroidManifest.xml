@@ -9,8 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Ordering">
-        <activity android:name=".itemdetails"></activity>
-        <activity android:name=".Item" />
+        <activity android:name=".MainActivity2"></activity>
         <activity android:name=".orderPlacement" />
         <activity android:name=".OrderConfirmation" />
         <activity android:name=".MainActivity">

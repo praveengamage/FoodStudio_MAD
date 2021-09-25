@@ -22,8 +22,6 @@
     <string name="name">Name :</string>
     <string name="contact">Contact No :</string>
     <string name="address">Address :</string>
-    <string name="payment">Payment Method:</string>
-    <string name="value">0</string>
 
     <string-array name="Select">
         <item>Cash</item>
@@ -32,7 +30,6 @@
     </string-array>
     <string name="title_activity_orderconfirmation">ScrollingActivity</string>
     <string name="btnOplacement">Order Placement</string>
-    <string name="btndelete">Order Delete</string>
     <string name="btnpay">Pay Now</string>
     <string name="itemadd">+</string>
     <string name="items">Items</string>
@@ -41,4 +38,10 @@
     <string name="btnsave">Save</string>
     <string name="food_details">Food Details</string>
     <string name="save">Save</string>
+    <string name="btninsert">Insert Order</string>
+    <string name="btnupdate">Update Order</string>
+    <string name="btndelete">Delete Order</string>
+    <string name="btndisplay">Display Order</string>
+    <string name="value">Value</string>
+
 </resources>

@@ -9,9 +9,13 @@ import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.miqbal.ordering.Order;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,17 +23,11 @@ public class MainActivity extends AppCompatActivity {
     int count= 0;
     private Button button;
 
-    private ListView noteListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        initWidgets();
-        loadFromDBToMemory();
-        setNoteAdapter();
-        setOnClickListner();
 
         value = (TextView) findViewById(R.id.value);
 
@@ -58,45 +56,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setOnClickListner() {
-        noteListView.setOnClickListener(new AdapterView.OnItemClickListener<>()
-        {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long 1)
-            {
-                Note selectedNote = (Note) noteListView.getItemAtPosition(position);
-                Intent editNoteIntent = new Intent(getApplicationContext(),itemdetails.class);
-                editNoteIntent.putExtra(Note.NOTE_EDIT_EXTRA,selectedNote.getId());
-                startActivity(editNoteIntent);
-            }
-        });
-    }
-
-    private void loadFromDBToMemory() {
-        SQLiteHelper sqLiteHelper = SQLiteHelper.instanceOfDatabase(this);
-        sqLiteHelper.populateNoteListArray();
-    }
-
-    private void setNoteAdapter() {
-        NoteAdapter noteAdapter = new NoteAdapter(getApplicationContext(),Note.nonDeletedNotes());
-        noteListView.setAdapter(noteAdapter);
-    }
-
-    private void initWidgets() {
-        noteListView= findViewById(R.id.noteListView);
-    }
-
-    public void newNote(View view)
+    public void insertDb(View insertDB)
     {
-        Intent newNoteIntent = new Intent(this, itemdetails.class);
-        startActivity(newNoteIntent);
-    }
+        //create the references
+        TextView value = (TextView)findViewById(R.id.value);
+        EditText name = (EditText)findViewById(R.id.inputname);
+        EditText contact = (EditText)findViewById(R.id.editTextPhone);
+        EditText address = (EditText)findViewById(R.id.editTextTextPostalAddress);
+        Spinner payment = (Spinner)findViewById(R.id.dropdown);
 
-    @Override
-    protected void onResume()
-    {
-        super.onResume();
-        setNoteAdapter();
+        //Instantiate the order object
+        Order orderObj = new Order(value.getText().toString(),name.getText().toString(),contact.getText().toString(),address.getText().toString());
+
+        //call the DBhelper's add method
+        DBHelper dbHelper = new DBHelper(this);
+        dbHelper.addOrder(orderObj);
+
+        Toast.makeText(this,"Order Inserted Successfully",Toast.LENGTH_SHORT).show();
+
     }
 
     public void increment(View v){
