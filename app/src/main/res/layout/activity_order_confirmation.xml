@@ -8,7 +8,7 @@
     tools:context=".OrderConfirmation">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/userdetails"
         android:layout_width="337dp"
         android:layout_height="134dp"
         android:layout_marginStart="155dp"
@@ -18,7 +18,9 @@
         android:layout_marginRight="199dp"
         android:layout_marginBottom="658dp"
         android:background="#CCC0C0"
+        android:text="@string/tttttttt"
         android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.421"
@@ -40,7 +42,7 @@
         app:srcCompat="@drawable/foods" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/orderDetails"
         android:layout_width="325dp"
         android:layout_height="299dp"
         android:background="#C1BABA"
@@ -72,6 +74,7 @@
         android:id="@+id/btnOplace"
         android:layout_width="160dp"
         android:layout_height="64dp"
+        android:onClick="readNext"
         android:text="@string/btnOplacement"
         android:textStyle="bold"
         app:backgroundTint="@color/btncol"

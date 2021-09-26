@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         myspinner.setAdapter(myAdapter);
 
-        button = (Button)findViewById(R.id.btnOConfirm);
+        /*button = (Button)findViewById(R.id.btnOConfirm);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view){
                 openMainActivity();
             }
-        });
+        });*/
 
     }
 
@@ -86,14 +86,14 @@ public class MainActivity extends AppCompatActivity {
         value.setText(""+count);
     }
 
-    public void openOrderConfirmation(){
+    /*public void openOrderConfirmation(){
         Intent intent = new Intent(this, OrderConfirmation.class);
         startActivity(intent);
     }
     public void openMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-    }
+    }*/
 
 
 }

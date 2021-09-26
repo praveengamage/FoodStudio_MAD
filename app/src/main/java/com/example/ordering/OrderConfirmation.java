@@ -18,12 +18,18 @@ public class OrderConfirmation extends AppCompatActivity {
     private Button button,view;
     DBHelper DB;
 
-
+    Cursor results;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_confirmation);
+
+        //Call the read database method
+        DBHelper dbHelper = new DBHelper(this);
+
+        //display
+        results = dbHelper.getAllOrders();
 
         button = (Button)findViewById(R.id.btnOplace);
         button.setOnClickListener(new View.OnClickListener(){
@@ -41,9 +47,20 @@ public class OrderConfirmation extends AppCompatActivity {
             }
         });
 
-
-
     }
+
+    public void readNext(View view){
+        //Create references
+        TextView displayOrderDetails = (TextView)findViewById(R.id.orderDetails);
+        TextView displayCustomerDetails = (TextView)findViewById(R.id.userdetails);
+
+
+        if(results.moveToNext()){
+            displayOrderDetails.setText(results.getString(1));
+            displayCustomerDetails.setText(results.getString(2));
+        }
+    }
+
     public void openOrderPlacement(){
         Intent intent = new Intent(this, orderPlacement.class);
         startActivity(intent);

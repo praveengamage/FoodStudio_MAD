@@ -43,5 +43,7 @@
     <string name="btndelete">Delete Order</string>
     <string name="btndisplay">Display Order</string>
     <string name="value">Value</string>
+    <string name="payment">Payment Method :</string>
+    <string name="tttttttt">"C KATUKURUNDA,0701088222,Badulla ,Credit Card "</string>
 
 </resources>
