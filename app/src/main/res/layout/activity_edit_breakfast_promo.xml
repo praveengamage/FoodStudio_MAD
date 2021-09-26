@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditBreakfastPromo">
+
+    <Button
+        android:id="@+id/gohome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Go to Home"
+        app:backgroundTint="@color/btn"
+        app:cornerRadius="15dp" />
+
+    <LinearLayout
+        android:id="@+id/breakfast"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/breakfast"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/btn"
+            android:gravity="center"
+            android:text="Breakfast Selection"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/updatedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:text="TextView"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/updateDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+             android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/updatepromocode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="Enter Promo Code"
+            android:inputType="textPersonName"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/updateadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Update"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/btn"
+            app:cornerRadius="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
